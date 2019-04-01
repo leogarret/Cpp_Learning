@@ -3,5 +3,11 @@ using namespace std;
 
 int main()
 {
-	return -1;
+	int a, b = 0;
+
+	cout << "Enter two numbers:" << endl;
+	cin >> a >> b;
+	cout << "The sum of " << a << " and " << b << " is " << a + b << "." << endl;
+	while (1);
+	return 0;
 }

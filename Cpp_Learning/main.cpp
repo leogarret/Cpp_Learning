@@ -3,15 +3,11 @@ using namespace std;
 
 int main()
 {
-	int sum = 0, val = 0, end = 0;
+	int sum = 0;
 
-	cout << "Choose two numbers to make a sequence and print the result of all the sequence' numbers" << endl;
-	cin >> val >> end;
-	while (val <= end) {
+	for (int val = 0; val <= 10; ++val)
 		sum += val;
-		++val;
-	}
-	cout << "Sum of 10 to 0 not inclusive is " << sum << "." << endl;
+	cout << "Sum of 0 to 10 inclusive is " << sum << "." << endl;
 	while (1);
 	return 0;
 }

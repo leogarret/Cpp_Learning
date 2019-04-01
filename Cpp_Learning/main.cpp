@@ -5,9 +5,9 @@ int main()
 {
 	int sum = 0;
 
-	for (int val = 0; val <= 10; ++val)
-		sum += val;
-	cout << "Sum of 0 to 10 inclusive is " << sum << "." << endl;
+	for (int i = 10; i >= 0; --i)
+		sum += i;
+	cout << "The sum is " << sum << "." << endl;
 	while (1);
 	return 0;
 }

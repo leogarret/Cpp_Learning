@@ -3,12 +3,13 @@ using namespace std;
 
 int main()
 {
-	int a, b = 0;
+	int sum = 0, val = 1;
 
-	cout << "Enter two numbers" << endl;
-	cin >> a;
-	cin >> b;
-	cout << "The result of " << a << " * " << b << " is " << a * b << "." << endl;
+	while (val <= 10) {
+		sum += val;
+		++val;
+	}
+	cout << "Sum of 1 to 10 inclusive is " << sum << "." << endl;
 	while (1);
 	return 0;
 }

@@ -4,16 +4,15 @@ using namespace std;
 int main()
 {
 	int start = 0, end = 0;
-	int sum = 0;
 
-	while (start >= end) {
-		cout << "Enter two numer to make a sequence (start number is lesser than end number)." << endl;
-		cin >> start;
-		cin >> end;
+	cout << "Choose start and end numbers to iterate and display odd or even." << endl;
+	cin >> start >> end;
+	for (; start <= end; ++start) {
+		if (!(start % 2))
+			cout << start << " is even." << endl;
+		else
+			cout << start << " is odd." << endl;
 	}
-	for (; start <= end; start++)
-		sum += start;
-	cout << "The sum is: " << sum << endl;
 	while (1);
 	return 0;
 }

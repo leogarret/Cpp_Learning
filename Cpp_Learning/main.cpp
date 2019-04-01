@@ -3,10 +3,11 @@ using namespace std;
 
 int main()
 {
-	int sum = 0;
+	int sum = 0, value = 0;
 
-	for (int i = 10; i >= 0; --i)
-		sum += i;
+	while (cin >> value){
+		sum += value;
+	}
 	cout << "The sum is " << sum << "." << endl;
 	while (1);
 	return 0;

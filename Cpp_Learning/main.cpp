@@ -4,9 +4,26 @@ using namespace std;
 
 int main()
 {
-	char *test = new char[255];
+	Sales_item books;
 
-	cin >> test;
-	cout << test << endl;
+	if (cin >> books) {
+		Sales_item buff;
+		while (cin >> buff) {
+			if (buff.isbn() == books.isbn())
+				books += buff;
+			else {
+				cout << books << endl;
+				while (1);
+				return 0;
+			}
+		}
+		cout << books << endl;
+		while (1);
+		return 0;
+	}
+	else {
+		cout << "No data!" << endl;
+		return -1;
+	}
 	return 0;
 }

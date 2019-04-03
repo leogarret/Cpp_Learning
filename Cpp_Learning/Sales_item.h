@@ -1,10 +1,7 @@
 #pragma once
 
 #ifndef SALESITEM_H
-// we're here only if SALESITEM_H has not yet been defined 
 #define SALESITEM_H
-
-// Definition of Sales_item class and related functions goes here
 #include <iostream>
 #include <string>
 
@@ -13,7 +10,7 @@ class Sales_item {
 	// and in chapter 14, pages 557, 558, 561
 	friend std::istream& operator>>(std::istream&, Sales_item&);
 	friend std::ostream& operator<<(std::ostream&, const Sales_item&);
-	friend bool operator<(const Sales_item&, const Sales_item&);
+	friend bool operator < (const Sales_item&, const Sales_item&);
 	friend bool
 		operator==(const Sales_item&, const Sales_item&);
 public:

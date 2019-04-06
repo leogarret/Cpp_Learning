@@ -4,10 +4,8 @@ using namespace std;
 
 int main()
 {
-	unsigned u1 = 32, u2 = 10;
-
-	cout << u1 - u2 << endl;
-	cout << (int)(u2 - u1) << endl;
+	for (unsigned i = 10; i >= 0 && i != 4294967295; --i)
+		cout << i << endl;
 	while (1);
 	return 0;
 }

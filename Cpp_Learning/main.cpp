@@ -4,26 +4,10 @@ using namespace std;
 
 int main()
 {
-	Sales_item books;
+	unsigned u1 = 32, u2 = 10;
 
-	if (cin >> books) {
-		Sales_item buff;
-		while (cin >> buff) {
-			if (buff.isbn() == books.isbn())
-				books += buff;
-			else {
-				cout << books << endl;
-				while (1);
-				return 0;
-			}
-		}
-		cout << books << endl;
-		while (1);
-		return 0;
-	}
-	else {
-		cout << "No data!" << endl;
-		return -1;
-	}
+	cout << u1 - u2 << endl;
+	cout << (int)(u2 - u1) << endl;
+	while (1);
 	return 0;
 }

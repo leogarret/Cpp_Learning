@@ -4,8 +4,12 @@ using namespace std;
 
 int main()
 {
-	for (unsigned i = 10; i >= 0 && i != 4294967295; --i)
-		cout << i << endl;
+	cout << "  ";
+	for (char i = 'A'; i != 'H' + 1; ++i)
+		cout << i << ' ';
+	cout << endl;
+	for (int i = 0; i <= 8; i++)
+		cout << i << " . . . . . . . ." << endl;
 	while (1);
 	return 0;
 }

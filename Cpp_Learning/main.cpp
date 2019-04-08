@@ -6,10 +6,13 @@ int reused = 42;
 
 int main()
 {
-	int reused = 12;
+	int i = 100, sum = 0;
 
-	cout << reused << endl; // Display the local variable
-	cout << ::reused << endl; // Display the global variable
+	for (int i = 0; i != 10;) {
+		sum += i;
+		::i++;
+	}
+	cout << i << " " << sum << endl;
 	while (1);
 	return 0;
 }

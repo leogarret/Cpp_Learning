@@ -1,15 +1,15 @@
 #include <iostream>
-#include "Sales_item.h"
+#include "my_int.hpp"
 using namespace std;
+
+int reused = 42;
 
 int main()
 {
-	cout << "  ";
-	for (char i = 'A'; i != 'H' + 1; ++i)
-		cout << i << ' ';
-	cout << endl;
-	for (int i = 0; i <= 8; i++)
-		cout << i << " . . . . . . . ." << endl;
+	int reused = 12;
+
+	cout << reused << endl; // Display the local variable
+	cout << ::reused << endl; // Display the global variable
 	while (1);
 	return 0;
 }

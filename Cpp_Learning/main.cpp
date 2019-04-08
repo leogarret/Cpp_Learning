@@ -6,13 +6,10 @@ int reused = 42;
 
 int main()
 {
-	int i = 100, sum = 0;
+	int a = 12;
+	int *p = &a;
 
-	for (int i = 0; i != 10;) {
-		sum += i;
-		::i++;
-	}
-	cout << i << " " << sum << endl;
+	cout << *p << endl;
 	while (1);
 	return 0;
 }

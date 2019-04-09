@@ -4,15 +4,9 @@ using namespace std;
 
 int main()
 {
-	int i = 12;
-	int c = 42;
-	int *ptr = &i;
-	int *&ref = ptr;
-
-	cout << *ref << endl;
-	ref = &c;
-	*ref = 54;
-	cout << c << endl;
+	int a = 98;
+	int *p1 = &a;
+	int *const p2 = p1;
 	while (1);
 	return 0;
 }

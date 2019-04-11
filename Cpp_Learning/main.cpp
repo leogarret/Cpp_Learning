@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-	int a = 98;
-	int *p1 = &a;
-	int *const p2 = p1;
+	const int a = 45; // Top level
+	const int *const pa = &a; // Top level
+	const int *pa = &a; // Low level
 	while (1);
 	return 0;
 }

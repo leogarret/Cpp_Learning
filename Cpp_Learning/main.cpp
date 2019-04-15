@@ -8,7 +8,6 @@ int test()
 
 int main()
 {
-	const int a = test();
 
 	return 0;
 }

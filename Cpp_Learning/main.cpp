@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
+int test()
+{
+	return rand();
+}
+
 int main()
 {
-	int a = 5;
-
-	char* u = "leo";
-
+	const int a = test();
 
 	return 0;
 }

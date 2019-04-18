@@ -3,18 +3,14 @@ using namespace std;
 
 using entier = int;
 
-int test()
+auto test()
 {
-	const int b = 13;
-	auto a = 13;
-
-	a = 23;
-	return rand();
+	return 1345765999999999995;
 }
 
 int main()
 {
-	constexpr int c = 67;
-	constexpr const int *a = &c;
+	decltype(test()) i = 42;
+
 	return 0;
 }

@@ -1,18 +1,14 @@
 #include <iostream>
+#include "Sales_item.h"
 
-typedef struct Sales_data {
-	std::string book_no;
-	unsigned units_sold = 0;
-	double revenue = 0.0;
-};
+using std::cout; using std::endl;
 
 int main()
 {
-	int a = 3, b = 4;
-	decltype(a = b) c = a;
-	Sales_data data = { "AZ243", 12, 34.5 };
+	int i = 50;
 
-	std::cout << data.book_no << std::endl;
+	while (i <= 100)
+		cout << i++ << endl;
 	getchar();
 	return 0;
 }

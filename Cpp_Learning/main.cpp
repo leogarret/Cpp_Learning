@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Sales_item.h"
-#include <string>
+#include <cstring>
 
 int strlen(char *str)
 {
@@ -12,13 +12,13 @@ int strlen(char *str)
 int main()
 {
 	
-	std::string sentence;
-	std::string buff;
+	std::string line = "Hello world!";
 
-	while (std::cin >> buff) {
-		sentence += buff;
+	for (char &c : line) {
+		if (c = std::toupper(c))
+			std::cout << c;
 	}
-	std::cout << sentence;
-	while (1);
+	std::cout << std::endl << line;
+	std::getchar();
 	return 0;
 }

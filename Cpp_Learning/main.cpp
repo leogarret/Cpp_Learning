@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Sales_item.h"
-#include <cstring>
+#include <string>
 
 int strlen(char *str)
 {
@@ -14,11 +14,9 @@ int main()
 	
 	std::string line = "Hello world!";
 
-	for (char &c : line) {
-		if (c = std::toupper(c))
-			std::cout << c;
-	}
-	std::cout << std::endl << line;
+	for (std::size_t i = 0; i != line.size() && !std::isspace(line[i]); ++i)
+		line[i] = std::toupper(line[i]);
+	std::cout << line;
 	std::getchar();
 	return 0;
 }

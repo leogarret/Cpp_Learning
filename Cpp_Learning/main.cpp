@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Sales_item.h"
 #include <string>
+#include <vector>
 
 int strlen(char *str)
 {
@@ -11,18 +11,14 @@ int strlen(char *str)
 
 int main()
 {
-	const std::string hex = "0123456789ABCDEF";
+	std::vector<std::string> list;
+	std::string word;
 
-	std::cout << "Enter a serie of digits and hit enter whene you have finished" << std::endl;
-
-	std::string result;
-	unsigned n = 0;
-	while (std::cin >> n) {
-		if (n < hex.size())
-			result += hex[n];
+	while (std::cin >> word)
+		list.push_back(word);
+	for (auto elem : list) {
+		std::cout << elem << " ";
 	}
-	std::cout << result << std::endl;
-
-	while (1);
+	std::getchar();
 	return 0;
 }

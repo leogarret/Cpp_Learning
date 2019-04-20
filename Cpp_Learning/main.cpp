@@ -1,19 +1,13 @@
 #include <iostream>
 #include "Sales_item.h"
-
-using std::cin;
-using std::cout; using std::endl;
+#include <string>
 
 int main()
 {
-	int start = 0, end = 0;
-
-	cout << "Start number : ";
-	cin >> start;
-	cout << "End number : ";
-	cin >> end;
-	while (start <= end)
-		cout << start++ << endl;
+	std::string s1("Hello");
+	s1 += " ca va ";
+	s1 += '?';
+	std::cout << s1;
 	getchar();
 	return 0;
 }

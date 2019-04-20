@@ -11,12 +11,18 @@ int strlen(char *str)
 
 int main()
 {
-	
-	std::string line = "Hello world!";
+	const std::string hex = "0123456789ABCDEF";
 
-	for (std::size_t i = 0; i != line.size() && !std::isspace(line[i]); ++i)
-		line[i] = std::toupper(line[i]);
-	std::cout << line;
-	std::getchar();
+	std::cout << "Enter a serie of digits and hit enter whene you have finished" << std::endl;
+
+	std::string result;
+	unsigned n = 0;
+	while (std::cin >> n) {
+		if (n < hex.size())
+			result += hex[n];
+	}
+	std::cout << result << std::endl;
+
+	while (1);
 	return 0;
 }

@@ -11,16 +11,12 @@ int strlen(char *str)
 
 int main()
 {
-	std::vector<std::string> s = { "salut je m'appelle Leo", "bonjour je mange du poulet", "yo c'est ninho!", "coucou je suis coucou" };
+	std::vector<int> vec = { 12, 34, 56, 21, 2, 56, 45, 98, 0, 27 };
+	auto mid = vec.begin() + vec.size() / 2;
+	auto it = vec.begin();
 
-	for (auto &elem : s) {
-		for (int i = 0; !std::isspace(elem.at(i)) && i < elem.size(); ++i) {
-			if (!std::isupper(elem.at(i)))
-				elem[i] = std::toupper(elem.at(i));
-		}
-	}
-	for (auto elem : s)
-		std::cout << elem << std::endl;
+	it += 6;
+	std::cout << (mid < it) << std::endl;
 	std::getchar();
 	return 0;
 }

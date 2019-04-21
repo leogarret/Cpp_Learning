@@ -11,12 +11,11 @@ int strlen(char *str)
 
 int main()
 {
-	std::vector<int> vec = { 12, 34, 56, 21, 2, 56, 45, 98, 0, 27 };
-	auto mid = vec.begin() + vec.size() / 2;
-	auto it = vec.begin();
+	std::vector<int> tab = { 12, 45, 32, 23, 98, 0, 32, 6 };
+	auto sit = tab.begin(), send = tab.end() - 1;
 
-	it += 6;
-	std::cout << (mid < it) << std::endl;
+	for (; sit != send && sit < send; ++sit, --send)
+		std::cout << *sit + *send << std::endl;
 	std::getchar();
 	return 0;
 }

@@ -11,14 +11,13 @@ int strlen(char *str)
 
 int main()
 {
-	std::string word = "hello";
+	std::vector<std::string> s = { "SA", "BC", "CE" };
+	std::vector<std::string>::iterator it = s.begin();
 
-	if (word.begin() != word.end()) {
-		auto it = word.begin();
-		it++;
-		*it = std::toupper(*it);
-	}
-	std::cout << word << std::endl;
+	std::cout << "This vector is holding " << s.size() << " element(s):" << std::endl;
+	for (; it != s.cend(); ++it)
+		std::cout << *it << " ";
+	std::cout << std::endl;
 	std::getchar();
 	return 0;
 }

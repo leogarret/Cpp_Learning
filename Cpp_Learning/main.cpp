@@ -4,12 +4,11 @@
 
 int main()
 {
-	int arr[] = { 23, 45, 67, -45, 34, 32, -5, 7 };
-	int arr2[] = { 23, 45, 67, -45, 34, 32, -5, 8 };
-	int* end = std::end(arr);
+	std::vector<int> arr = { 1, 34, 56, -4, 33 };
+	std::vector<int> arr2 = { 1, 34, 56, -4, 34 };
 
-	if (std::size<int>(arr) == std::size<int>(arr2)) {
-		for (int i = 0; &arr[i] != end; ++i) {
+	if (arr.size() == arr2.size()) {
+		for (int i = 0; &arr[i] != &arr[arr.size()]; ++i) {
 			if (arr[i] != arr2[i]) {
 				std::cout << "Arrays are not equals!" << std::endl;
 				std::getchar();

@@ -2,19 +2,16 @@
 #include <string>
 #include <vector>
 
-int _arr[10];
-
 int main()
 {
-	int arr[10] = {};
-	int arr2[10] = {};
+	int arr[] = { 23, 45, 67, -45, 34, 32, -5, 8 };
+	int* ptr = arr;
+	int* ptr2 = std::end(arr);
 
-	for (int i = 0; i < 10; ++i)
-		arr[i] = i;
-	for (int i = 0; i < 10; ++i)
-		arr2[i] = arr[i];
-	for (auto elem : arr2)
-		std::cout << elem << std::endl;
+	while (ptr < ptr2) {
+		std::cout << *ptr << std::endl;
+		++ptr;
+	}
 	std::getchar();
 	return 0;
 }

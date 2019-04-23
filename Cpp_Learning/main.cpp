@@ -2,24 +2,17 @@
 #include <string>
 #include <vector>
 
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 int main()
 {
-	std::vector<int> arr = { 1, 34, 56, -4, 33 };
-	std::vector<int> arr2 = { 1, 34, 56, -4, 34 };
+	int arr[4] = { 45, 67, 34, 21 };
+	std::vector<int> vec = { arr, std::end(arr) };
 
-	if (arr.size() == arr2.size()) {
-		for (int i = 0; &arr[i] != &arr[arr.size()]; ++i) {
-			if (arr[i] != arr2[i]) {
-				std::cout << "Arrays are not equals!" << std::endl;
-				std::getchar();
-				return 0;
-			}
-		}
-		std::cout << "Arrays are equals!" << std::endl;
-		std::getchar();
-		return 0;
-	}
-	std::cout << "Arrays are not equals!" << std::endl;
+	for (auto elem : vec)
+		std::cout << elem << std::endl;
 	std::getchar();
 	return 0;
 }

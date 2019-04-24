@@ -8,9 +8,15 @@
 
 int main()
 {
-	int arr[4] = { 45, 67, 34, 21 };
-	std::vector<int> vec = { arr, std::end(arr) };
+	int arr[5] = { 23, 45, 65, 89, 32 };
+	std::vector<int> vec(arr, std::end(arr));
 
+	int arr2[5];
+	int i = 0;
+	for (auto elem : vec) {
+		arr[i] = elem;
+		++i;
+	}
 	for (auto elem : vec)
 		std::cout << elem << std::endl;
 	std::getchar();

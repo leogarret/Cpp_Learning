@@ -8,17 +8,13 @@
 
 int main()
 {
-	int arr[5] = { 23, 45, 65, 89, 32 };
-	std::vector<int> vec(arr, std::end(arr));
+	int ia[3][4] = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
+	int(*pt)[4] = ia;
 
-	int arr2[5];
-	int i = 0;
-	for (auto elem : vec) {
-		arr[i] = elem;
-		++i;
+	for (; pt != std::end(ia); ++pt) {
+		for (int elem = 0; pt[elem] != std::end(*pt); ++elem)
+			std::cout << pt[elem] << std::endl;
 	}
-	for (auto elem : vec)
-		std::cout << elem << std::endl;
 	std::getchar();
 	return 0;
 }

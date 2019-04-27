@@ -8,13 +8,7 @@
 
 int main()
 {
-	int ia[3][4] = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
-	int(*pt)[4] = ia;
-
-	for (; pt != std::end(ia); ++pt) {
-		for (int elem = 0; pt[elem] != std::end(*pt); ++elem)
-			std::cout << pt[elem] << std::endl;
-	}
+	std::cout << 12 / 3 * 4 + 5 * 15 + 24 % 4 / 2 << std::endl;
 	std::getchar();
 	return 0;
 }
